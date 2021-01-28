@@ -1,0 +1,44 @@
+@import "reset";
+@import "variables";
+@import "parts/header";
+@import "parts/driver";
+@import "parts/about";
+@import "parts/icon-boxes";
+@import "parts/newsletter";
+@import "parts/partners";
+@import "parts/footer";
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: $dark-gray;
+}
+
+.container {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px;
+
+  @media (max-width: 1400px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 20px;
+  }
+}
+
+button,
+input[type=button] {
+  padding: 20px 40px;
+  background: $color-gradient;
+  color: white;
+  font-weight: 800;
+  background-size: 200% auto;
+  transition: 0.5s;
+
+  &:hover {
+    background-position: right;
+  }
+}
