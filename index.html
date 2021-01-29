@@ -26,11 +26,19 @@
   <header>
     <div class="container">
       <div class="logo">
-        <img src="assets/images/RCmedical-2.png" alt="">
       </div>
 
-      <nav data-aos="fade-down">
-        <ul class="menu">
+      <nav>
+
+        <button class="burger">
+          <div class="bars">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+        </button>
+
+        <ul id="menu" class="menu">
           <a href="">
             <li>Produkty</li>
           </a>
@@ -51,23 +59,77 @@
     </div>
   </header>
   <section class="driver">
-    <div class="driver-image">
-      <div class="container">
-        <div class="driver-text" data-aos="fade-right">
-          <h1>RC Medical</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore
-            magna
-            aliqua.</p>
+    <div class="swiper-container swiper-driver">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide driver-image">
+          <div class="container">
+            <div class="driver-text" data-aos="fade-right">
+              <h1>RC Medical</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna
+                aliqua.</p>
+            </div>
+          </div>
+          <img src="assets/images/driver-slide1.jpg" alt="">
         </div>
+
+        <div class="swiper-slide driver-image">
+          <img src="assets/images/driver-slide2.jpg" alt="">
+          <div class="container">
+            <div class="driver-text" data-aos="fade-right">
+              <h1>Dbamy o bezpieczeństwo</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna
+                aliqua.</p>
+            </div>
+
+
+          </div>
+        </div>
+
+        <div class="swiper-slide driver-image">
+          <img src="assets/images/driver-slide3.jpg" alt="">
+
+          <div class="container">
+            <div class="driver-text" data-aos="fade-right">
+              <h1>Zadowoleni klienci</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna
+                aliqua.</p>
+              <a href="" class="button">referencje</a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide driver-image">
+          <img src="assets/images/driver-slide4.jpg" alt="">
+
+          <div class="container">
+            <div class="driver-text" data-aos="fade-right">
+              <h1>Szeroki asortyment</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna
+                aliqua.</p>
+
+              <a href="" class="button">zobacz</a>
+            </div>
+          </div>
+        </div>
+
       </div>
+      <div class="swiper-pagination"></div>
     </div>
+
   </section>
   <section class="about">
     <div class="container">
       <div class="left" data-aos="fade-right">
         <h2>RC Medical</h2>
-        <span>Kompleksowe zaopatrzenie w materiały medyczne</span>
       </div>
       <div class="right">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -126,14 +188,14 @@
       <form action="POST">
         <label for="email">E-mail</label>
         <input type="email" name="email" id="email" placeholder="Podaj nam swój adres e-mail">
-        <input type="button" value="Zapisz się">
+        <input type="button" value="zapisz się">
       </form>
     </div>
   </section>
   <section class="partners">
     <div class="container">
       <h3>Zaufali nam:</h3>
-      <div class="swiper-container">
+      <div class="swiper-container swiper-partners">
         <div class="swiper-wrapper">
           <div class="swiper-slide partner-logo">
             <img src="assets/images/partners-logos/kwpwroclaw.png" alt="">
@@ -163,17 +225,127 @@
       </div>
     </div>
   </section>
-  <footer></footer>
+  <footer>
+    <div class="contact">
+      <div class="container">
+
+        <div class="contact-box">
+          <div class="icon mail"></div>
+          <div class="contact-info">
+            <span class="title">Wyślij wiadomość</span>
+            <a href="mailto:">biuro@rcmedical.pl</a>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <div class="icon phone"></div>
+          <div class="contact-info">
+            <span class="title">Zadzwoń do nas</span>
+            <a href="tel:+">333 444 555</a>
+          </div>
+        </div>
+
+        <div class="contact-box">
+          <div class="icon hours"></div>
+          <div class="contact-info">
+            <span class="title">Godziny otwarcia</span>
+            <span class="hours-info">poniedziałek - piątek</span>
+            <span>9:00 - 17:00</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+
+      <div class="footer-contact-info">
+        <div class="logo"></div>
+        <div class="contact-office">
+          <span class="title">Biuro</span>
+          <span>ul.Mehoffera 10</span>
+          <span>31-322 Kraków</span>
+        </div>
+        <div class="contact-storage">
+          <span class="title">Magazyn</span>
+          <span>ul. Komandosów 12</span>
+          <span>32-085 Modlniczka</span>
+        </div>
+
+      </div>
+      <ul class="links-box menu">
+        <h3>Menu</h3>
+        <a href="">
+          <li>Produkty</li>
+        </a>
+        <a href="">
+          <li>Zaufali nam</li>
+        </a>
+        <a href="">
+          <li>Współpraca</li>
+        </a>
+        <a href="">
+          <li>Do pobrania</li>
+        </a>
+        <a href="">
+          <li>Kontakt</li>
+        </a>
+      </ul>
+
+      <ul class="links-box products">
+        <h3>Produkty</h3>
+        <a href="">
+          <li>Rękawiczki</li>
+        </a>
+        <a href="">
+          <li>Maski</li>
+        </a>
+        <a href="">
+          <li>Odzież ochronna</li>
+        </a>
+        <a href="">
+          <li>Przyłbice</li>
+        </a>
+        <a href="">
+          <li>Gogle medyczne</li>
+        </a>
+      </ul>
+
+    </div>
+
+    <div class="copyright">
+      <div class="container">
+        <span>© Copyright <span id="year"></span> RC Medical</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/burger.js"></script>
 
   <script>
     AOS.init();
 
-    const swiper = new Swiper('.swiper-container', {
+    document.getElementById("year").innerHTML = (new Date().getFullYear());
+
+    const partners = new Swiper('.swiper-partners', {
       slidesPerView: "auto",
       spaceBetween: 40,
       autoplay: {
         delay: 2000
       }
+    });
+
+    const driver = new Swiper('.swiper-driver', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 8000
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: "true",
+      },
     });
   </script>
 </body>

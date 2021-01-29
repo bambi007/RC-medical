@@ -1,0 +1,67 @@
+$burger-size: 40px;
+$bars-size: $burger-size / 2 / 10;
+$bars-height: $bars-size;
+
+.burger {
+  position: absolute;
+  z-index: 666;
+  top: 30px;
+  right: 20px;
+  width: $burger-size;
+  height: $burger-size;
+  padding: 0 !important;
+  // transition: 0.4s;
+  display: none;
+
+  @media (max-width: 768px) {
+    display: inline-block;
+  }
+
+  .bars {
+    position: relative;
+    width: 75%;
+    height: 75%;
+    margin: 0 auto;
+
+    .bar {
+      position: absolute;
+      width: 100%;
+      background: white;
+      transition: 0.4s;
+      height: $bars-height;
+
+      &:nth-of-type(3) {
+        top: 80%;
+      }
+
+      &:nth-of-type(2) {
+        top: 50%;
+      }
+
+      &:nth-of-type(1) {
+        top: 20%;
+      }
+    }
+  }
+
+  // ROTATING BARS INTO CLOSE BUTTON #######################
+  &.open {
+    .bar {
+      background: white;
+
+      &:nth-of-type(1) {
+        transform: rotate(225deg);
+        top: 50%;
+      }
+
+      &:nth-of-type(2) {
+        transform: scaleX(0);
+      }
+
+      &:nth-of-type(3) {
+        transform: rotate(-225deg);
+        top: 50%;
+      }
+    }
+  }
+}

@@ -1,4 +1,186 @@
 footer {
   background: $dark-gray;
-  height: 400px;
+  color: white;
+
+  .contact {
+    background: $med-gray;
+    // background-image: url(../images/cool-pattern.jpg);
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // background-attachment: fixed;
+    // backdrop-filter: opacity(0.2);
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      @media (max-width: 580px) {
+        flex-direction: column;
+      }
+    }
+
+    .contact-box {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: calc(100% / 3);
+      justify-content: center;
+
+      @media (max-width: 768px) {
+        text-align: center;
+      }
+
+      @media (max-width: 580px) {
+        width: 100%;
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .icon {
+        width: 60px;
+        height: 60px;
+        margin-right: 30px;
+        background-repeat: no-repeat;
+        background-size: 90%;
+        background-position: center;
+        filter: invert(1);
+
+        @media (max-width: 1024px) {
+          width: 40px;
+          height: 40px;
+          margin-right: 20px;
+        }
+
+        @media (max-width: 768px) {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          opacity: 0.2;
+          filter: invert(0);
+          margin-right: 0;
+        }
+
+        @media (max-width: 580px) {
+          width: 60px;
+          height: 60px;
+        }
+
+        &.hours {
+          background-image: $contact-hours;
+        }
+
+        &.mail {
+          background-image: $contact-mail;
+        }
+
+        &.phone {
+          background-image: $contact-phone;
+        }
+      }
+
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 100;
+      }
+
+      .title {
+        margin-bottom: 5px;
+      }
+
+      a {
+        margin-bottom: 0;
+        transition: color 0.2s;
+
+        &:hover {
+          color: $light-gray;
+        }
+      }
+
+      .hours-info {
+        font-weight: 400;
+      }
+    }
+  }
+
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .links-box {
+      width: 25%;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      display: inline-block;
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+
+  .footer-contact-info {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .logo {
+      width: 100%;
+      height: 50px;
+      background-image: $logo;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      filter: invert(1);
+      opacity: 0.3;
+      margin-bottom: 20px;
+    }
+
+    .contact-office,
+    .contact-storage {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      span {
+        font-weight: 200;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .title {
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-weight: 800;
+        color: $med-gray;
+      }
+
+    }
+  }
+
+  .copyright {
+    color: $med-gray;
+    background: black;
+    height: 40px;
+    font-size: 14px;
+
+    .container {
+      padding: 0 40px !important;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

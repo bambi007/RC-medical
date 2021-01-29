@@ -16,8 +16,9 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: $dark-gray;
-    opacity: 0.6;
+    // background: $dark-gray;
+    // opacity: 0.6;
+    backdrop-filter: blur(10px);
   }
 
   .container {

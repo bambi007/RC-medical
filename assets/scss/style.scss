@@ -1,5 +1,6 @@
 @import "reset";
 @import "variables";
+@import "parts/burger";
 @import "parts/header";
 @import "parts/driver";
 @import "parts/about";
@@ -30,15 +31,32 @@ body {
 }
 
 button,
+.button,
 input[type=button] {
+  display: inline-block;
   padding: 20px 40px;
   background: $color-gradient;
   color: white;
   font-weight: 800;
   background-size: 200% auto;
   transition: 0.5s;
+  cursor: pointer;
 
   &:hover {
     background-position: right;
   }
+}
+
+.swiper-pagination-bullet {
+  background: white !important;
+  opacity: 0.6 !important;
+  box-shadow: 0 0 5px #00000030;
+  width: 10px !important;
+  height: 10px !important;
+  margin: 0 8px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: $primary !important;
+  opacity: 1 !important;
 }
