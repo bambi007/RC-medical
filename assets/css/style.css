@@ -662,6 +662,16 @@ header .menu a:hover:after {
   }
 }
 
+.newsletter form .accept {
+  margin-top: 10px;
+}
+
+.newsletter form .accept label {
+  color: white;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
 .partners h3 {
   margin-bottom: 40px;
 }
