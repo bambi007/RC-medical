@@ -9,6 +9,8 @@
 @import "parts/partners";
 @import "parts/contact-boxes";
 @import "parts/footer";
+@import "parts/liaison";
+@import "parts/counter";
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -46,6 +48,15 @@ input[type=button] {
   &:hover {
     background-position: right;
   }
+}
+
+input[type=text],
+input[type=tel],
+textarea {
+  background: white;
+  padding: 20px;
+  border: 1px solid $light-gray;
+  margin-bottom: 20px;
 }
 
 .swiper-pagination-bullet {

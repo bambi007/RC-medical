@@ -1,0 +1,58 @@
+.liaison {
+  margin-top: 40px;
+
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .text {
+    width: 40%;
+    margin-right: 40px;
+
+    @media (max-width: 1024px) {
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+
+  .liaison-form {
+    width: 60%;
+    position: relative;
+
+    @media (max-width: 1024px) {
+      width: 50%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    label {
+      color: transparent;
+      position: absolute;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=tel],
+    textarea {
+      width: 100%;
+    }
+
+    input[type=button] {
+      @media(max-width: 580px) {
+        width: 100%;
+      }
+    }
+  }
+}

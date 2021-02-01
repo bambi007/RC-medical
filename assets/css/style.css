@@ -1017,6 +1017,205 @@ footer .copyright .container span {
   font-weight: 200;
 }
 
+.liaison {
+  margin-top: 40px;
+}
+
+.liaison .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .liaison .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.liaison .text {
+  width: 40%;
+  margin-right: 40px;
+}
+
+@media (max-width: 1024px) {
+  .liaison .text {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .liaison .text {
+    width: 100%;
+  }
+}
+
+.liaison .liaison-form {
+  width: 60%;
+  position: relative;
+}
+
+@media (max-width: 1024px) {
+  .liaison .liaison-form {
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .liaison .liaison-form {
+    width: 100%;
+    margin-top: 40px;
+  }
+}
+
+.liaison .liaison-form label {
+  color: transparent;
+  position: absolute;
+}
+
+.liaison .liaison-form input[type=text],
+.liaison .liaison-form input[type=email],
+.liaison .liaison-form input[type=tel],
+.liaison .liaison-form textarea {
+  width: 100%;
+}
+
+@media (max-width: 580px) {
+  .liaison .liaison-form input[type=button] {
+    width: 100%;
+  }
+}
+
+.counter {
+  background: linear-gradient(24deg, #3267E3, #B000DC);
+  -webkit-box-shadow: 0 0 5px #00000030;
+          box-shadow: 0 0 5px #00000030;
+}
+
+@media (max-width: 768px) {
+  .counter {
+    overflow-x: scroll;
+  }
+}
+
+.counter .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.counter .counter-box {
+  color: white;
+  width: calc(100% / 5 - (4 * 40px / 5));
+  height: 120px;
+  padding: 20px;
+  margin-right: 40px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .counter .counter-box {
+    width: 200px;
+  }
+}
+
+.counter .counter-box:last-child {
+  margin-right: 0;
+}
+
+.counter .counter-box .spinner {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  z-index: 10;
+  opacity: 0.2;
+}
+
+.counter .counter-box .spinner:after {
+  content: " ";
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 6px solid #B000DC;
+  border-color: black transparent black transparent;
+  -webkit-animation: spin 1s linear;
+          animation: spin 1s linear;
+}
+
+.counter .counter-box .counter-content {
+  position: relative;
+  z-index: 11;
+}
+
+.counter .counter-box .count {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 60px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .counter .counter-box .count {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+}
+
+.counter .counter-box .title {
+  font-size: 14px;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   color: #33323A;
@@ -1060,6 +1259,15 @@ button:hover,
 .button:hover,
 input[type=button]:hover {
   background-position: right;
+}
+
+input[type=text],
+input[type=tel],
+textarea {
+  background: white;
+  padding: 20px;
+  border: 1px solid #CED2E6;
+  margin-bottom: 20px;
 }
 
 .swiper-pagination-bullet {
