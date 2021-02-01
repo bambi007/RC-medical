@@ -21,6 +21,7 @@ header {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center left;
+    color: transparent;
 
     @media (max-width: 1024px) {
       background-image: $logo-mobile;
