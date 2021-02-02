@@ -680,11 +680,21 @@ header .menu a:hover:after {
 .partners .partner-logo {
   width: 200px;
   height: 100px;
+  border: 1px solid #f7f7f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .partners .partner-logo img {
-  width: 90%;
-  height: 90%;
+  width: 70%;
+  height: 70%;
   -o-object-fit: contain;
      object-fit: contain;
   -webkit-filter: grayscale(1);
@@ -1216,6 +1226,141 @@ footer .copyright .container span {
   }
 }
 
+.trusted p {
+  width: 80%;
+}
+
+@media (max-width: 1024px) {
+  .trusted p {
+    width: 100%;
+  }
+}
+
+.trusted .button {
+  margin-top: 20px;
+}
+
+.trusted .testimonials {
+  position: relative;
+  margin-top: 40px;
+  padding-top: 40px;
+  border-top: 1px solid #f0f0f0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  height: 300px;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.trusted .testimonials:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  bottom: 0;
+  left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(white));
+  background: linear-gradient(transparent, white);
+}
+
+.trusted .testimonials.expand:after {
+  display: none;
+}
+
+.trusted .testimonials .more {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+}
+
+.trusted .testimonials .more:hover {
+  bottom: 5px;
+}
+
+.trusted .testimonials .quote {
+  width: calc(100% / 3);
+  padding-right: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  padding-left: 40px;
+}
+
+@media (max-width: 768px) {
+  .trusted .testimonials .quote {
+    width: 50%;
+  }
+}
+
+@media (max-width: 580px) {
+  .trusted .testimonials .quote {
+    width: 80%;
+    margin: 0 auto;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .trusted .testimonials .quote {
+    width: 100%;
+  }
+}
+
+.trusted .testimonials .quote p {
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #707B98;
+}
+
+.trusted .testimonials .quote p:before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMzIDI1IiBoZWlnaHQ9IjI1cHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMyAyNSIgd2lkdGg9IjMzcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnPjxwYXRoIGQ9Ik0xOC4wMDYsNi41MzhjMC0xLjk3MywwLjY2Mi0zLjU1NCwxLjk4OC00Ljc0M2MxLjMyNi0xLjE5LDIuOTc3LTEuNzg1LDQuOTQ3LTEuNzg1ICAgYzIuNTE3LDAsNC40ODgsMC43OTksNS45MTYsMi4zOTdDMzIuMjg1LDQuMDA0LDMzLDYuMTMsMzMsOC43ODJjMCwyLjcxOS0wLjQyNCw1LjAzMi0xLjI3NSw2LjkzNiAgIGMtMC44NSwxLjkwMy0xLjg2OSwzLjQ4My0zLjA2MSw0Ljc0M2MtMS4xODgsMS4yNTgtMi40MywyLjI0NC0zLjcyMywyLjk1OGMtMS4yOTEsMC43MTQtMi40MTMsMS4yMzktMy4zNjUsMS41ODFsLTMuMjY1LTUuNTA4ICAgYzEuMzYtMC41NDUsMi41MTctMS40MTIsMy40NjgtMi42MDJjMC45NTMtMS4xOSwxLjQ5Ni0yLjQ2NSwxLjYzMy0zLjgyNGMtMS4zNTksMC0yLjYwMi0wLjU5Ny0zLjcyNC0xLjc4NiAgIEMxOC41NjYsMTAuMDksMTguMDA2LDguNTA5LDE4LjAwNiw2LjUzOHogTTAuMzU5LDYuNTM4YzAtMS45NzMsMC42NjMtMy41NTQsMS45ODktNC43NDNDMy42NzQsMC42MDQsNS4zMjQsMC4wMSw3LjI5NSwwLjAxICAgYzIuNTE4LDAsNC40ODgsMC43OTksNS45MTYsMi4zOTdjMS40MjksMS41OTcsMi4xNDMsMy43MjMsMi4xNDMsNi4zNzVjMCwyLjcxOS0wLjQyNCw1LjAzMi0xLjI3NSw2LjkzNiAgIGMtMC44NSwxLjkwMy0xLjg2OSwzLjQ4My0zLjA2LDQuNzQzYy0xLjE4OCwxLjI1OC0yLjQzMSwyLjI0NC0zLjcyNCwyLjk1OEM2LjAwNCwyNC4xMzMsNC44ODMsMjQuNjU4LDMuOTMsMjVsLTMuMjY0LTUuNTA4ICAgYzEuMzYtMC41NDUsMi41MTYtMS40MTIsMy40NjctMi42MDJjMC45NTMtMS4xOSwxLjQ5Ny0yLjQ2NSwxLjYzMy0zLjgyNGMtMS4zNTksMC0yLjYwMi0wLjU5Ny0zLjcyMy0xLjc4NiAgIEMwLjkyLDEwLjA5LDAuMzU5LDguNTA5LDAuMzU5LDYuNTM4eiIgZmlsbD0iI0NFRDJFNiIvPjwvZz48L3N2Zz4=);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.trusted .testimonials .quote p:after {
+  content: "";
+  display: block;
+  margin-top: 10px;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(24deg, #3267E3, #B000DC);
+}
+
+.trusted .testimonials .quote .author {
+  width: 100%;
+  font-size: 16px;
+  color: #707B98;
+}
+
+.trusted .testimonials .quote .company {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   color: #33323A;
@@ -1253,12 +1398,32 @@ input[type=button] {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
+  text-align: center;
 }
 
 button:hover,
 .button:hover,
 input[type=button]:hover {
   background-position: right;
+}
+
+@media (max-width: 425px) {
+  button,
+  .button,
+  input[type=button] {
+    width: 100%;
+  }
+}
+
+.small-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background: white;
+  color: #B000DC;
+  font-weight: 400;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(24deg, #3267E3, #B000DC);
 }
 
 input[type=text],

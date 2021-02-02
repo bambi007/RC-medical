@@ -11,6 +11,7 @@
 @import "parts/footer";
 @import "parts/liaison";
 @import "parts/counter";
+@import "parts/trusted";
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -44,10 +45,26 @@ input[type=button] {
   background-size: 200% auto;
   transition: 0.5s;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     background-position: right;
   }
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+}
+
+.small-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  background: white;
+  color: $secondary;
+  font-weight: 400;
+  border: 1px solid;
+  border-image-slice: 1;
+  border-image-source: $color-gradient;
 }
 
 input[type=text],
