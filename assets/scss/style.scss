@@ -12,6 +12,7 @@
 @import "parts/liaison";
 @import "parts/counter";
 @import "parts/trusted";
+@import "parts/contact";
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -74,6 +75,40 @@ textarea {
   padding: 20px;
   border: 1px solid $light-gray;
   margin-bottom: 20px;
+}
+
+
+.liaison-form,
+.contact-form {
+  width: 60%;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    width: 50%;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  label {
+    color: transparent;
+    position: absolute;
+  }
+
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  textarea {
+    width: 100%;
+  }
+
+  input[type=button] {
+    @media(max-width: 580px) {
+      width: 100%;
+    }
+  }
 }
 
 .swiper-pagination-bullet {

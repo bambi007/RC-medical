@@ -5,12 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,400;0,600;0,800;1,200;1,400;1,600;1,800&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -19,6 +18,9 @@
 
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
   <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
   <title>RC Medical</title>
 </head>
 
@@ -57,133 +59,121 @@
       </nav>
     </div>
   </header>
+  <section id="address" class="map-section">
+    <div class="map" id="map">
+    </div>
+    <div class="info">
+    </div>
+  </section>
 
-  <section class="counter">
+  <section class="contact">
     <div class="container">
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count" id="count">0</span>
-          <span class="title">Zadowolonych klientów</span>
+      <h2>Kontakt</h2>
+      <div class="text">
+
+        <div class="contact-section">
+          <h3>RC Medical</h3>
+          <div class="adress">
+            <span class="contact-info">ul. Mehoffera 10</span>
+            <span class="contact-info">31-322 Kraków</span>
+          </div>
+          <div class="numbers">
+            <span class="contact-info">NIP: 123 456 78 90</span>
+            <span class="contact-info">KRS 1234567890</span>
+            <span class="contact-info">REGON 123456789</span>
+          </div>
+
         </div>
-        <div class="spinner"></div>
+        <div class="contact-section">
+          <h3>Biuro</h3>
+          <div class="adress">
+            <span class="contact-info">ul.Mehoffera 10</span>
+            <span class="contact-info">31-322 Kraków</span>
+          </div>
+        </div>
+        <div class="contact-section">
+          <h3 class="title">Magazyn</h3>
+          <div class="adress">
+            <span class="contact-info">ul. Komandosów 1/2</span>
+            <span class="contact-info">32-085 Modlniczka</span>
+          </div>
+        </div>
       </div>
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count" id="count">0</span>
-          <span class="title">Zadowolonych klientów</span>
-        </div>
-        <div class="spinner"></div>
+
+      <form action="" class="contact-form">
+        <label for="name">Imię i nazwisko</label>
+        <input type="text" name="" id="name" placeholder="Imię i nazwisko">
+        <label for="email">Adres e-mail</label>
+        <input type="text" name="" id="email" placeholder="Adres e-mail">
+        <label for="message">Wiadomość</label>
+        <textarea name="" id="message" cols="30" rows="10" placeholder="Wiadomość"></textarea>
+        <input type="button" value="Wyślij">
+      </form>
+    </div>
+  </section>
+
+  <section class="persons">
+    <div class="container">
+      <div class="person-box">
+        <span class="name">Grzegorz Guzik</span>
+        <span class="position">spec. ds. zamówień publicznych</span>
+        <a class="phone" href="tel:+48501176792">+48 501 176 792</a>
+        <a class="mail" href="mailto:">grzegorz@rcmedical.pl</a>
       </div>
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count" id="count">0</span>
-          <span class="title">Zadowolonych klientów</span>
-        </div>
-        <div class="spinner"></div>
+      <div class="person-box">
+        <span class="name">Anna Bat-Ulzi</span>
+        <span class="position">starszy handlowiec</span>
+        <a class="phone" href="tel:+48792893397">+48 792 893 397</a>
+        <a class="mail" href="mailto:">anna@rcmedical.pl</a>
       </div>
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count" id="count">0</span>
-          <span class="title">Zadowolonych klientów</span>
-        </div>
-        <div class="spinner"></div>
+      <div class="person-box">
+        <span class="name">Marcin Bendkowski</span>
+        <span class="position">specjalista ds. logistyki</span>
+        <a class="phone" href="tel:+48603183207">+48 603 183 207</a>
+        <a class="mail" href="mailto:">marcin@rcmedical.pl</a>
       </div>
-      <div class="counter-box">
-        <div class="counter-content">
-          <span class="count" id="count">0</span>
-          <span class="title">Zadowolonych klientów</span>
-        </div>
-        <div class="spinner"></div>
+      <div class="person-box">
+        <span class="name">Sylwester Bendkowski</span>
+        <span class="position">specjalista ds. marketingu</span>
+        <a class="phone" href="tel:+48575644394">+48 575 644 394</a>
+        <a class="mail" href="mailto:">sylwester@rcmedical.pl</a>
+      </div>
+      <div class="person-box">
+        <span class="name">Magdalena Wójtowicz</span>
+        <span class="position">dział ksiegowości</span>
+        <a class="phone" href="tel:+48739286872">+48 739 286 872</a>
+        <a class="mail" href="mailto:">ksiegowosc@rcmedical.pl</a>
+      </div>
+      <div class="person-box">
+        <span class="name">Kacper Warykiewicz</span>
+        <span class="position">obsługa klienta zagranicznego</span>
+        <a class="phone" href="tel:+48662230388">+48 662 230 388</a>
+        <a class="mail" href="mailto:">kacper@rcmedical.pl</a>
       </div>
     </div>
   </section>
 
-  <section class="trusted">
+  <section class="newsletter">
     <div class="container">
-      <h2>Zaufali nam</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio atque quo ab, tempore, numquam a sunt
-        dolore cumque eos debitis, blanditiis doloribus optio dolorem quia culpa qui sapiente. Corrupti, at! Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Quos, quis! Aliquid error iusto sapiente molestiae. Illo reiciendis
-        dolores ipsam repellat quidem. Eaque ducimus eveniet minus nobis eum a, atque officiis.</p>
-      <a href="wspolpraca.html" class="button">współpraca</a>
-
-      <div id="testimonials" class="testimonials">
-
-        <span id="see-more" class="button small-button more">pokaż więcej</span>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae natus libero ea ullam
-            sunt quod.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae natus libero ea ullam
-            sunt quod autem voluptatum aperiam animi.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae natus libero ea ullam
-            sunt quod autem voluptatum aperiam animi.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit..</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae natus libero ea ullam
-            sunt quod autem voluptatum aperiam animi.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae natus libero ea ullam
-            sunt.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
-        <div class="quote">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, adipisci molestiae natus libero ea ullam
-            sunt quod.</p>
-          <span class="author">Jan Kowalski</span>
-          <span class="company">Amazon</span>
-        </div>
-
+      <div class="text">
+        <h2>Zapisz się do newslettera</h2>
+        <span>Bądź na bierząco lorem ipsum dolor sit amet</span>
       </div>
 
+      <form action="POST">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="Podaj nam swój adres e-mail">
+        <input type="button" value="zapisz się">
+        <div class="accept">
+          <input type="checkbox" name="" id="accept-PP">
+          <label for="accept-PP">Akceptuję politykę prywatności</label>
+        </div>
+      </form>
     </div>
   </section>
-
   <section class="partners">
     <div class="container">
+      <h3>Zaufali nam:</h3>
       <div class="swiper-container swiper-partners">
         <div class="swiper-wrapper">
           <div class="swiper-slide partner-logo">
@@ -212,24 +202,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-  <section class="newsletter">
-    <div class="container">
-      <div class="text">
-        <h2>Zapisz się do newslettera</h2>
-        <span>Bądź na bierząco lorem ipsum dolor sit amet</span>
-      </div>
-
-      <form action="POST">
-        <label for="email">E-mail</label>
-        <input type="email" name="email" id="email" placeholder="Podaj nam swój adres e-mail">
-        <input type="button" value="zapisz się">
-        <div class="accept">
-          <input type="checkbox" name="" id="accept-PP">
-          <label for="accept-PP">Akceptuję politykę prywatności</label>
-        </div>
-      </form>
     </div>
   </section>
   <footer>
@@ -327,8 +299,7 @@
   </footer>
 
   <script src="assets/js/burger.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/testimonials.js"></script>
+  <script src="assets/js/map.js"></script>
 
   <script>
     AOS.init();
@@ -341,6 +312,20 @@
       autoplay: {
         delay: 2000
       }
+    });
+
+    const driver = new Swiper('.swiper-driver', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      autoplay: {
+        delay: 8000
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: "true",
+      },
     });
   </script>
 </body>
